@@ -14,25 +14,30 @@ public class Raton {
     private String modelo;
     
     public Raton(){}
+    
     public Raton(boolean inalambrico, String modelo){
         this.inalambrico = inalambrico;
         this.modelo = modelo;
     }
-    
-    public boolean getInalambrico(){
+
+    public boolean isInalambrico() {
         return inalambrico;
     }
-    public String getModelo(){
-        return modelo;
-    }
-    public void setInalambrico(boolean inalambrico){
+
+    public void setInalambrico(boolean inalambrico) {
         this.inalambrico = inalambrico;
     }
-    public void setModelo(String modelo){
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
     
-    public String visualizar(){
+    @Override
+    public String toString(){
         if(inalambrico = true){
             return "Características ratón\nInalámbrico: Sí\nModelo: " + modelo + "\n";
         }

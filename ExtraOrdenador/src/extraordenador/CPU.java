@@ -14,25 +14,30 @@ public class CPU {
     private int ram;
     
     public CPU(){};
+    
     public CPU(int nucleos, int ram){
         this.nucleos = nucleos;
         this.ram = ram;
     }
-    
-    public int getNucleos(){
+
+    public int getNucleos() {
         return nucleos;
     }
-    public int getRAM(){
-        return ram;
-    }
-    public void setNucleos(int nucleos){
+
+    public void setNucleos(int nucleos) {
         this.nucleos = nucleos;
     }
-    public void setRAM(int ram){
+
+    public int getRam() {
+        return ram;
+    }
+
+    public void setRam(int ram) {
         this.ram = ram;
     }
     
-    public String visualizar(){
+    @Override
+    public String toString(){
         return "Características CPU\nNúcleos: " + nucleos + "\nMemoria RAM: " + ram + "GB\n";
     }
 }

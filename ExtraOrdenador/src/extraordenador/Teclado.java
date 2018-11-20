@@ -13,18 +13,21 @@ public class Teclado {
     private int numTeclas;
     
     public Teclado(){}
+    
     public Teclado(int numTeclas){
         this.numTeclas = numTeclas;
     }
-    
-    public int getTeclas(){
+
+    public int getNumTeclas() {
         return numTeclas;
     }
-    public void setTeclas(int numTeclas){
+
+    public void setNumTeclas(int numTeclas) {
         this.numTeclas = numTeclas;
     }
     
-    public String visualizar(){
+    @Override
+    public String toString(){
         return "Características teclado\nTeclas: " + numTeclas + "\n";
     }
 }

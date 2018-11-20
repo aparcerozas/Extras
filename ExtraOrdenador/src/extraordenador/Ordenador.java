@@ -25,14 +25,14 @@ public class Ordenador {
     //Setters de las clases
     public void setCPU(int nucleos, int ram){
         procesador.setNucleos(nucleos);
-        procesador.setRAM(ram);
+        procesador.setRam(ram);
     }
     public void setRaton(boolean inalambrico, String modelo){
         mouse.setInalambrico(inalambrico);
         mouse.setModelo(modelo);
     }
     public void setTeclado(int numTeclas){
-        keyboard.setTeclas(numTeclas);
+        keyboard.setNumTeclas(numTeclas);
     }
     public void setMonitor(String marca, float pulgadas){
         screen.setMarca(marca);
@@ -40,13 +40,13 @@ public class Ordenador {
     }
     //Visualización de los atributos de todas las clases
     public String visualizarAtributos(){
-        return procesador.visualizar() + "\n" + mouse.visualizar() 
-        + "\n" + keyboard.visualizar() + "\n" + screen.visualizar(); 
+        return procesador.toString() + "\n" + mouse.toString() 
+        + "\n" + keyboard.toString() + "\n" + screen.toString(); 
     }
     //Cálculo del precio según ciertas características
     public double calcularPrecio(){
-        double precio = procesador.getRAM()*5 + keyboard.getTeclas()*0.7 + screen.getPulgadas()*12;
-        if(mouse.getInalambrico() == true){
+        double precio = procesador.getRam()*5 + keyboard.getNumTeclas()*0.7 + screen.getPulgadas()*12;
+        if(mouse.isInalambrico() == true){
             return Math.round(precio * 1.5);
         }
         else{
