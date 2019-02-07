@@ -16,8 +16,12 @@ public class ExBuilder {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Empleado e1 = new Empleado("Juan","Martínez","Piñeiro",6,9,1998,1.76,1.5,1450,"12345678A","Oficinista","Experto");
-        Empleado e2 = new Empleado("Pedro","Sánchez","Tijuán",0,0,0,0,0,0,"87654321B","","");
+        Empleado e1 = new EmpleadoBuilder2().setNombre("Juan").setApellido1("Martínez").setApellido2("Piñeiro").setDia(6).setMes(9).setAno(1998).setAltura(1.76).setPie(1.5).setSueldo(1450).setDni("12345678A").setCargo("Oficinista").setFormacion("Experto").createEmpleado();
+        Empleado e2 = new EmpleadoBuilder2().setNombre("Pedro").setApellido1("Sánchez").setApellido2("Tijuán").setDia(0).setMes(0).setAno(0).setAltura(0).setPie(0).setSueldo(0).setDni("87654321B").setCargo("").setFormacion("").createEmpleado();
+        Empleado e3 = new EmpleadoBuilder("Adrián","Parcero","12563478C")
+                .setApellido2("Zas")
+                .crearEmpleado();
+        System.out.println(e3.toString());
     }
     
 }

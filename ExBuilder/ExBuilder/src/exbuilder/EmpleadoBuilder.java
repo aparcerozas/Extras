@@ -29,6 +29,53 @@ public class EmpleadoBuilder {
         this.dni = dni;
     }
 
+    public EmpleadoBuilder setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
+        return this;
+    }
+
+    public EmpleadoBuilder setDia(int dia) {
+        this.dia = dia;
+        return this;
+    }
+
+    public EmpleadoBuilder setMes(int mes) {
+        this.mes = mes;
+        return this;
+    }
+
+    public EmpleadoBuilder setAno(int ano) {
+        this.ano = ano;
+        return this;
+    }
+
+    public EmpleadoBuilder setAltura(double altura) {
+        this.altura = altura;
+        return this;
+    }
+
+    public EmpleadoBuilder setPie(double pie) {
+        this.pie = pie;
+        return this;
+    }
+
+    public EmpleadoBuilder setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+        return this;
+    }
+
+    public EmpleadoBuilder setCargo(String cargo) {
+        this.cargo = cargo;
+        return this;
+    }
+
+    public EmpleadoBuilder setFormacion(String formacion) {
+        this.formacion = formacion;
+        return this;
+    }
     
+    public Empleado crearEmpleado(){
+        return new EmpleadoBuilder2().setNombre(nombre).setApellido1(apellido1).setApellido2(apellido2).setDia(dia).setMes(mes).setAno(ano).setAltura(altura).setPie(pie).setSueldo(sueldo).setDni(dni).setCargo(cargo).setFormacion(formacion).createEmpleado();
+    }
     
 }

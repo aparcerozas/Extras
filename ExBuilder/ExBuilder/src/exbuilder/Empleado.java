@@ -41,6 +41,14 @@ public class Empleado {
         this.cargo = cargo;
         this.formacion = formacion;
     }
+
+    @Override
+    public String toString() {
+        return "nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2=" 
+                + apellido2 + ", dia=" + dia + ", mes=" + mes + ", ano=" + ano 
+                + ", altura=" + altura + ", pie=" + pie + ", sueldo=" + sueldo 
+                + ", dni=" + dni + ", cargo=" + cargo + ", formacion=" + formacion;
+    }
     
     
     
